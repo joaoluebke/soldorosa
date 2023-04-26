@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
@@ -8,19 +8,17 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import Image from 'next/image';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     headerStyle: {
         background: 'transparent',
-        boxShadow: 'none',
+        boxShadow: 'none', 
     },
-    toolbarStyle: {
+    toolbarStyle: { 
         marginTop: 25,
         backgroundColor: '#5187b6',
         width: '50%',
-        display: 'flex',
-        alignSelf: 'center',
+        alignSelf: 'center', 
         borderRadius: '15px'
     },
     whatsapp: {
@@ -28,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         marginLeft: '1rem',
         '&:hover': { 
             color: '#25D366',
-        }
+        } 
     },
     instagram: {
         color: 'white',

@@ -6,24 +6,26 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { CardMedia } from '@material-ui/core';
-import { Grid } from '@mui/material'; 
+import { Grid } from '@mui/material';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import WifiIcon from '@mui/icons-material/Wifi';
 import KitchenIcon from '@mui/icons-material/Kitchen';
 import ConnectedTvIcon from '@mui/icons-material/ConnectedTv';
-interface CardProps { 
-    title: string,
-}
 
+interface CardProps {
+    id: number,
+    title: string, 
+    coverImage: string,
+    description: string
+}
 
 const useStyles = makeStyles({
     root: {
         minWidth: 275,
-
     },
     bullet: {
         display: 'inline-block',
-        margin: '0 2px', 
+        margin: '0 2px',
         transform: 'scale(0.8)',
     },
     title: {
@@ -34,39 +36,47 @@ const useStyles = makeStyles({
     },
     media: {
         height: 240,
-    }, 
-    cardOptions: { 
+    },
+    cardOptions: {
         justifyContent: 'center',
 
     },
     btnCardOptions: {
         background: '#5187b6',
         color: 'white',
-        '&:hover': { 
+        '&:hover': {
             background: '#7fa7c9',
-        } 
+        }
     },
     icons: {
-        justifyContent: 'flex-end', 
-        display: 'flex' 
+        justifyContent: 'flex-end',
+        display: 'flex'
     },
-    icon: {  
+    icon: {
         marginLeft: '0.5rem',
         color: '#7fa7c9'
     }
 });
 
-export default function OutlinedCard({ title }: CardProps) {
+export default function OutlinedCard({ id, title, coverImage, description }: CardProps) {
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
 
     return (
         <Card className={classes.root} variant="outlined">
             <CardMedia
-                className={classes.media}  
-                image={"https://i.imgur.com/LqNHNI8.jpg"}
-                title="Quarto 1 e 2"
-            /> 
+                className={classes.media}
+                image={coverImage}
+                title={title}
+            />
+            {/* <Image
+                alt="teste"
+                src={coverImage}
+                fill
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
+                className={classes.media} /> */}
             <CardContent>
                 <Typography variant="h5" component="h2">
                     <Grid container className={classes.root} >
@@ -77,13 +87,13 @@ export default function OutlinedCard({ title }: CardProps) {
                             <AcUnitIcon className={classes.icon} />
                             <WifiIcon className={classes.icon} />
                             <KitchenIcon className={classes.icon} />
-                            <ConnectedTvIcon className={classes.icon} /> 
+                            <ConnectedTvIcon className={classes.icon} />
                         </Grid>
                     </Grid>
-                </Typography> 
+                </Typography>
                 <Typography variant="body2" component="p">
-                    well meaning and kindly. 
-                    <br /> 
+                    well meaning and kindly.
+                    <br />
                     {'"a benevolent smile"'}
                 </Typography>
             </CardContent>

@@ -11,10 +11,10 @@ import AcUnitIcon from '@mui/icons-material/AcUnit';
 import WifiIcon from '@mui/icons-material/Wifi';
 import KitchenIcon from '@mui/icons-material/Kitchen';
 import ConnectedTvIcon from '@mui/icons-material/ConnectedTv';
+
 interface CardProps { 
     title: string,
 }
-
 
 const useStyles = makeStyles({
     root: {
@@ -80,7 +80,7 @@ export default function OutlinedCard({ title }: CardProps) {
                             <ConnectedTvIcon className={classes.icon} />
                         </Grid>
                     </Grid>
-                </Typography> 
+                </Typography>  
                 <Typography variant="body2" component="p">
                     well meaning and kindly. 
                     <br /> 

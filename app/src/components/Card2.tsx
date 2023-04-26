@@ -9,13 +9,11 @@ import { CardMedia } from '@material-ui/core';
 import { Grid } from '@mui/material'; 
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import WifiIcon from '@mui/icons-material/Wifi';
-import KitchenIcon from '@mui/icons-material/Kitchen';
+import KitchenIcon from '@mui/icons-material/Kitchen';  
 import ConnectedTvIcon from '@mui/icons-material/ConnectedTv';
 interface CardProps { 
     title: string,
 }
-
-
 const useStyles = makeStyles({
     root: {
         minWidth: 275,
