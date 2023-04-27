@@ -12,7 +12,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 const useStyles = makeStyles((theme: Theme) => createStyles({
     headerStyle: {
         background: 'transparent !important',
-        boxShadow: 'none', 
+        boxShadow: 'none !important', 
     },
     toolbarStyle: { 
         marginTop: 25,
