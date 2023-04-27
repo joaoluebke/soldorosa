@@ -11,7 +11,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     headerStyle: {
-        background: 'transparent',
+        background: 'transparent !important',
         boxShadow: 'none', 
     },
     toolbarStyle: { 
